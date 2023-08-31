@@ -12,7 +12,7 @@ const server = app.listen(8000, () => {
 const io = require("socket.io")(server);
 
 app.get('/',(req,res)=>{
-  res.send('rinning')
+  res.send('running')
 })
 
 const users = {}; //This is an empty object to store user data
