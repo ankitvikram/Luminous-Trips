@@ -5,15 +5,17 @@ const app = express();
 const corsOptions = {origin: "http://127.0.0.1:5500"};
 app.use(cors());
 
+
+app.get('/',(req,res)=>{
+  res.send('running')
+})
+
+
 const server = app.listen(8000, () => {
   console.log("Server is running on port 8000");
 });
 
 const io = require("socket.io")(server);
-
-app.get('/',(req,res)=>{
-  res.send('running')
-})
 
 const users = {}; //This is an empty object to store user data
 
